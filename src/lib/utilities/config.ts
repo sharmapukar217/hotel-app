@@ -13,7 +13,7 @@ export const navBarLinks = [
   { name: "Home", url: "/" },
   { name: "Hotels", url: "/#hotels" },
   { name: "Services", url: "/#services" },
-  { name: "Blog", url: "/blog" },
+  // { name: "Blog", url: "/blog" },
   { name: "FAQs", url: "/#faqs" },
   { name: "Contact", url: "/#contact" },
 ];
