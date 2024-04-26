@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@layer base {
+  :root {
+    --border-radius: 0.5rem;
+
+    --color-background: hsl(0 0% 100%);
+    --color-foreground: hsl(240 10% 3.9%);
+
+    --color-primary: hsl(223 91% 46%);
+    --color-primary-foreground: hsl(210, 20%, 98%);
+    --color-secondary: hsl(210 40% 96.1%);
+    --color-secondary-foreground: hsl(222.2 47.4% 11.2%);
+    --color-muted: hsl(220, 14.3%, 95.9%);
+    --color-muted-foreground: hsl(220, 8.9%, 46.1%);
+    --color-accent: hsl(45, 93%, 47%);
+    --color-accent-foreground: hsl(220.9, 39.3%, 11%);
+    --color-destructive: hsl(0, 84.2%, 60.2%);
+    --color-destructive-foreground: hsl(210, 20%, 98%);
+    --color-border: hsl(240 5.9% 90%);
+  }
+
+  .dark {
+    --color-background: hsl(240 10% 3.9%);
+    --color-foreground: hsl(0 0% 98%);
+    --color-primary: hsl(223, 96%, 69%);
+    --color-primary-foreground: hsl(210, 20%, 98%);
+    --color-secondary: hsl(240 3.7% 15.9%);
+    --color-secondary-foreground: hsl(0 0% 98%);
+    --color-muted: hsl(240 3.7% 15.9%);
+    --color-muted-foreground: hsl(240 5% 64.9%);
+    --color-accent: hsl(45, 93%, 47%);
+    --color-accent-foreground: hsl(210, 20%, 98%);
+    --color-destructive: hsl(0, 62.8%, 30.6%);
+    --color-destructive-foreground: hsl(210, 20%, 98%);
+    --color-border: hsl(240 3.7% 15.9%);
+  }
+
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    user-select: none;
+
+    @apply focus-visible:outline-2 focus-visible:outline-dashed focus-visible:outline-primary;
+  }
+
+  html {
+    /* scrolling related settings */
+    scroll-behavior: smooth;
+    overscroll-behavior: contain;
+
+    /* remove transparent layer on tap on mobiles */
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    overscroll-behavior: contain;
+    -webkit-text-size-adjust: 100%;
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8;
+  }
+}
